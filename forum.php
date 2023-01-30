@@ -117,86 +117,89 @@ include('includes/config.php');
             $cnt=1;
             if($query->rowCount() > 0)
             {
-                foreach($results as $result)
-                {	?>
+            foreach($results as $result)
+            {	?>
 
-                        <form action="submitReview.php" method="post">
-                    <div class="rom-btm">
-                        <div class="col-md-3 room-left wow fadeInLeft animated" data-wow-delay=".5s">
-                            <img src="admin/forumImages/<?php echo htmlentities($result->forumImage);?>" class="img-responsive" alt="">
-                        </div>
-                        <div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
-                            <h4><?php echo htmlentities($result->forumImage);?></h4>
-                            <h3><?php echo htmlentities($result->Topic);?></h3>
-                            <h6>Posted on: <?php echo htmlentities($result->PostingDate);?> by <?php echo htmlentities($result->FullName);?></h6>
-                            <p>Location: <?php echo htmlentities($result->LocationName);?></p>
-                            <h5><b>Destinations: </b> <?php echo htmlentities($result->Destinations);?></h5>
-                            <h4>No.of days: <?php echo htmlentities($result->NumDays);?> days | No.of adults: <?php echo htmlentities($result->PeopleNum);?></h4>
-                            <h5>Travel Budget: <?php echo htmlentities($result->TravelCost);?> LKR</h5>
-                            <br>
-                            <h7><b></b> <?php echo htmlentities($result->FeedBack);?></h7>
-                            <br>
-                            <br>
-                            <h6>Reccomendations: <b></b> <?php echo htmlentities($result->Recommendations);?></h6>
-                            <br><br>
-                            <div class="selectroom-info animated wow fadeInUp animated" data-wow-duration="1200ms" data-wow-delay="500ms" style="visibility: visible; animation-duration: 1200ms; animation-delay: 500ms; animation-name: fadeInUp; margin-top: -70px">
-                            <ul
-                                <ul class="fa-plus-square-o">
-                                    <label class="inputLabel">Reviews</label>
-                                    <input class="special" type="text" name="comment" required="">
-                                </ul>
-                                <?php if($_SESSION['login'])
-                                {?>
-                                    <ul class="spe" align="center">
-                                        <button type="submit" name="submit2" class="btn-primary btn">Review</button>
-                                    </ul>
-                                <?php } else {?>
-                                    <li class="sigi" align="center" style="margin-top: 1%">
-                                        <a href="#" data-toggle="modal" data-target="#myModal4" class="btn-primary btn" >Sign-in to Review</a></li>
-                                <?php } ?>
-                                <div class="clearfix"></div>
-
-                                <h4><?php echo htmlentities($result->Description);?></h4>
-
-
-                                <ul>
-                            </div>
-
-                        </div>
-                        </form>
-                        <div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
-
-
-                            <form action="likes.php" method="post">
-                                <input type="hidden" name="id" value="<?php echo $result->id;?>">
-                                <input type="hidden" name="likes" value="<?php echo $result->likes;?>">
-                                <button type="submit" class="fa fa-thumbs-up" name="like">&nbsp;<?php echo htmlentities($result->likes);?></button>
-                            </form>
-
-
-                            <form action="dislikes.php" method="post">
-                                <input type="hidden" name="id" value="<?php echo $result->id;?>">
-                                <input type="hidden" name="dislikes" value="<?php echo $result->dislikes;?>">
-                                <button type="submit" class="fa fa-thumbs-down" name="dislike">&nbsp;<?php echo htmlentities($result->dislikes);?></button>
-                            </form>
-
-
-
-
-
-                            <br><br>
-                            <ul><a href="#" data-toggle="modal" data-target="#myModal3"><p>@Report</p></a>  </ul>
-
-                        </div>
-                        <div class="clearfix"></div>
+            <form action="submitReview.php" method="post">
+                <div class="rom-btm">
+                    <div class="col-md-3 room-left wow fadeInLeft animated" data-wow-delay=".5s">
+                        <img src="admin/forumImages/<?php echo htmlentities($result->forumImage);?>" class="img-responsive" alt="">
                     </div>
+                    <div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
+                        <h4><?php echo htmlentities($result->forumImage);?></h4>
+                        <h3><?php echo htmlentities($result->Topic);?></h3>
+                        <h6>Posted on: <?php echo htmlentities($result->PostingDate);?> by <?php echo htmlentities($result->FullName);?></h6>
+                        <p>Location: <?php echo htmlentities($result->LocationName);?></p>
+                        <h5><b>Destinations: </b> <?php echo htmlentities($result->Destinations);?></h5>
+                        <h4>No.of days: <?php echo htmlentities($result->NumDays);?> days | No.of adults: <?php echo htmlentities($result->PeopleNum);?></h4>
+                        <h5>Travel Budget: <?php echo htmlentities($result->TravelCost);?> LKR</h5>
+                        <br>
+                        <h7><b></b> <?php echo htmlentities($result->FeedBack);?></h7>
+                        <br>
+                        <br>
+                        <h6>Reccomendations: <b></b> <?php echo htmlentities($result->Recommendations);?></h6>
+                        <br><br>
+                        <div class="selectroom-info animated wow fadeInUp animated" data-wow-duration="1200ms" data-wow-delay="500ms" style="visibility: visible; animation-duration: 1200ms; animation-delay: 500ms; animation-name: fadeInUp; margin-top: -70px">
+                            <ul
+                            <ul class="fa-plus-square-o">
+                                <label class="inputLabel">Reviews</label>
+                                <input class="special" type="text" name="comment" required="">
+                            </ul>
+                            <?php if($_SESSION['login'])
+                            {?>
+                                <ul class="spe" align="center">
+                                    <button type="submit" name="submit2" class="btn-primary btn">Review</button>
+                                </ul>
+                            <?php } else {?>
+                                <li class="sigi" align="center" style="margin-top: 1%">
+                                    <a href="#" data-toggle="modal" data-target="#myModal4" class="btn-primary btn" >Sign-in to Review</a></li>
+                            <?php } ?>
+                            <div class="clearfix"></div>
 
-                <?php }} ?>
+                            <h4><?php echo htmlentities($result->Description);?></h4>
+
+
+                            <ul>
+                        </div>
+
+                    </div>
+            </form>
+            <div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
+                <?php if($_SESSION['like']==$result->id) : ?>
+
+                    <form action="dislikes.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $result->id;?>">
+                        <input type="hidden" name="dislikes" value="<?php echo $result->dislikes;?>">
+                        <button type="submit" class="fa fa-thumbs-down" name="dislike">&nbsp;<?php echo htmlentities($result->dislikes);?></button>
+                    </form>
+
+                <?php else : ?>
+                    <form action="likes.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $result->id;?>">
+                        <input type="hidden" name="likes" value="<?php echo $result->likes;?>">
+                        <button type="submit" class="fa fa-thumbs-up" name="like">&nbsp;<?php echo htmlentities($result->likes);?></button>
+                    </form>
+                <?php endif; ?>
 
 
 
+
+
+
+
+                <br><br>
+                <ul><a href="#" data-toggle="modal" data-target="#myModal3"><p>@Report</p></a>  </ul>
+
+            </div>
+            <div class="clearfix"></div>
         </div>
+
+        <?php }} ?>
+
+
+
     </div>
+</div>
 </div>
 <!--- /rooms ---->
 
