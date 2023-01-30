@@ -117,26 +117,10 @@ include('includes/config.php');
 
         <?php }} ?>
 
-        <form>
-            <ul class="spe" align="center">
-            <input class="btn-primary btn" type="button" value="Plan Your Trip" id="show-html">
-            </ul>
-        </form>
-
-        <div id="html-container">
-            <h5><?php echo htmlentities($result->Id);?></h5>
-        </div>
+                    
 
 
-    </div>
-
-      <?php include('includes/index.html');?>                  
-
-
-
-
-
-<!--    --><?php //include('includes/Index.html');?>
+<?php //include('includes/Index.html');?>
 </div>
 <!--- /selectroom ---->
 <!--- /footer-top ---->
