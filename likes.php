@@ -24,5 +24,4 @@ $_SESSION["like"] = $_POST['id'];
 
 header("Location: forum.php");
 
-
 ?>
