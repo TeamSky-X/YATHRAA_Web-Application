@@ -129,22 +129,9 @@ include('includes/config.php');
 
 
     </div>
-<!--        <ul class="spe" align="center">-->
-<!--            <a href="discover-plan.php">-->
-<!--                <button id="show-map" class="btn-primary btn"><b>Plan Your Trip</b></button>-->
-<!--            </a>-->
-<!--        </ul>-->
 
-<script>
-    document.getElementById("show-html").addEventListener("click", function() {
-        fetch("includes/Index.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("html-container").innerHTML = data;
-            });
-    });
+      <?php include('includes/index.html');?>                  
 
-</script>
 
 
 
