@@ -44,7 +44,7 @@ $msg="Booking Confirm successfully";
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Manage Bookings</title>
+<title>YATHRAA | Enterprise Manage Booking</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -128,15 +128,14 @@ $msg="Booking Confirm successfully";
 					    <table id="table">
 						<thead>
 						  <tr>
-						  <th>Booikn id</th>
+						  <th>Booking id</th>
 							<th>Name</th>
 							<th>Mobile No.</th>
 							<th>Email Id</th>
 							<th>RegDate </th>
-							<th>From /To </th>
+							<th>Dates</th>
 							<th>Comment </th>
-							<th>Status </th>
-							<th>Action </th>
+
 						  </tr>
 						</thead>
 						<tbody>
@@ -177,30 +176,13 @@ foreach($results as $result)
 		<td><a href="update-package.php?pid=<?php echo htmlentities($result->pid);?>"><?php echo htmlentities($result->pckname);?></a></td>
 		<td><?php echo htmlentities($result->fdate);?> To <?php echo htmlentities($result->tdate);?></td>
 		<td><?php echo htmlentities($result->comment);?></td>
-		<td><?php if($result->status==0)
-            {
-                echo "Pending";
-            }
-            if($result->status==1)
-            {
-                echo "Confirmed";
-            }
-            if($result->status==2 and  $result->cancelby=='a')
-            {
-                echo "Canceled by you at " .$result->upddate;
-            }
-            if($result->status==2 and $result->cancelby=='u')
-            {
-                echo "Canceled by User at " .$result->upddate;
 
-            }
-            ?></td>
 
         <?php if($result->status==2)
         {
             ?><td>Cancelled</td>
         <?php } else {?>
-			<td><a href="manage-bookings.php?bkid=<?php echo htmlentities($result->bookid);?>" onclick="return confirm('Do you really want to cancel booking')" >Cancel</a> / <a href="manage-bookings.php?bckid=<?php echo htmlentities($result->bookid);?>" onclick="return confirm('Do you really want to cancel booking')" >Confirm</a></td>
+
 
 
         <?php }?>

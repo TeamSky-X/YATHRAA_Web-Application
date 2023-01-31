@@ -125,16 +125,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <label for="focusedinput" class="col-sm-2 control-label">Select the type</label>
                                     <div class="col-sm-8">
                                         <label for="focusedinput" class="col-sm-2 control-label">
-                                            <input type="checkbox" name="producttype" value="Travelling Equipments"> Equipments
+                                            <input type="radio" name="producttype" value="Travelling Equipments"> Equipments
                                         </label>
                                         <label for="focusedinput" class="col-sm-2 control-label">
-                                            <input type="checkbox" name="producttype" value="Clothing"> Clothing
+                                            <input type="radio" name="producttype" value="Clothing"> Clothing
                                         </label>
                                         <label for="focusedinput" class="col-sm-2 control-label">
-                                            <input type="checkbox" name="producttype" value="Accommodation"> Accommodation
+                                            <input type="radio" name="producttype" value="Accommodation"> Accommodation
                                         </label>
                                         <label for="focusedinput" class="col-sm-2 control-label">
-                                            <input type="checkbox" name="producttype" value="Transportation"> Transportation
+                                            <input type="radio" name="producttype" value="Transportation"> Transportation
                                         </label>
 
 <!--                                        <input type="checkbox" class="form-control1" name="producttype" id="producttype" placeholder="Vechile Type" required>-->

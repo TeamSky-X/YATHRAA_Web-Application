@@ -1,3 +1,6 @@
+<head>
+    <title>YATHRAA | Enterprise SignUp</title>
+
 <?php
 error_reporting(0);
 include('includes/config.php');
