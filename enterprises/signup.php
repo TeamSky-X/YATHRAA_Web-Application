@@ -79,7 +79,6 @@ VALUES(:etname,:username,:password,:category,:email,:introduction)";
 
 
             </div>
-            <?php header('location:signup.php'); ?>
 
 
         </div>
