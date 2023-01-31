@@ -58,8 +58,13 @@ include('includes/config.php');
 <div class="banner-3">
     <div class="container">
         <h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"><b>Discover<b></h1>
+
     </div>
 </div>
+<br>
+<ul><a href="infocentre.php">
+        <button style="text-align: center" class="plan-btn">Plan Your Trip</button>
+    </a></ul>
 <!--- /banner ---->
 <!--- selectroom ---->
 <div class="selectroom">
@@ -80,7 +85,6 @@ include('includes/config.php');
         {	?>
 
             <form name="book" method="post">
-                <a href="#" ><button>Plan Your Trip</button></a>
                 <div class="selectroom_top">
                     <div class="col-md-4 selectroom_left wow fadeInLeft animated" data-wow-delay=".5s">
                         <img src="admin/pacakgeimages/<?php echo htmlentities($result->Image);?>" class="img-responsive" alt="">
@@ -116,8 +120,6 @@ include('includes/config.php');
             </form>
 
 
-            <?php include('includes/Index.html');?>
-
 
 
         <?php }} ?>
@@ -127,6 +129,24 @@ include('includes/config.php');
 
 
 </div>
+    <style>
+        .plan-btn {
+            margin-left: 10px;
+            width: 150px;
+            height: 40px;
+            background-color: white;
+            color: #4A8EFF;
+            border: 2px solid #4A8EFF;
+            border-radius: 5px;
+            margin-left: 690px;
+
+        .plan-btn:hover {
+            color: white;
+            background-color: #4A8EFF;
+            border: 2px solid #4A8EFF;
+
+        }
+    </style>
 <!--- /selectroom ---->
 <!--- /footer-top ---->
 <?php include('includes/footer.php');?>

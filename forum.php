@@ -189,7 +189,6 @@ include('includes/config.php');
                 <?php endif; ?>
 
                 <p>Likes: <?php echo htmlentities($result->likes);?></p>
-                <p>Dislikes: <?php echo htmlentities($result->dislikes);?></p>
 
 
 

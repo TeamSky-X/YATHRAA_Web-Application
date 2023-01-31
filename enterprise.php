@@ -6,12 +6,14 @@ include('includes/config.php');
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Travel Planner</title>
+    <title>YATHRAA | Travel Planner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="applijewelleryion/x-javascript">
+         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
@@ -28,7 +30,7 @@ include('includes/config.php');
     <!--//end-animate-->
 </head>
 <body>
-<?php include('includes/header.php');?>
+<?php include('includes/header.php'); ?>
 <!--- banner ---->
 
 <div class="banner-3">
@@ -36,37 +38,39 @@ include('includes/config.php');
 
     <div class="container">
         <?php
-        $username=$_SESSION['alogin'];
+        $username = $_SESSION['alogin'];
         //echo $username;
-        $sql ="SELECT etId FROM tblenterprises WHERE username=:uname";
-        $query= $dbh -> prepare($sql);
-        $query-> bindParam(':uname', $username, PDO::PARAM_STR);
+        $sql = "SELECT etId FROM tblenterprises WHERE username=:uname";
+        $query = $dbh->prepare($sql);
+        $query->bindParam(':uname', $username, PDO::PARAM_STR);
         //$query-> bindParam(':password', $password, PDO::PARAM_STR);
-        $query-> execute();        $user=$query->fetch(PDO::FETCH_ASSOC);
-
+        $query->execute();
+        $user = $query->fetch(PDO::FETCH_ASSOC);
 
 
         $sql = "SELECT * from tblenterprises WHERE etId=:etId";
-        $query = $dbh -> prepare($sql);
-        $query-> bindParam(':etId', $_GET['etid'], PDO::PARAM_INT);
+        $query = $dbh->prepare($sql);
+        $query->bindParam(':etId', $_GET['etid'], PDO::PARAM_INT);
         $query->execute();
-        $results=$query->fetchAll(PDO::FETCH_OBJ);
+        $results = $query->fetchAll(PDO::FETCH_OBJ);
 
-        if($query->rowCount() > 0)
-        {
-            foreach($results as $result)
-            {				?>
-                <td width="300"><h1><?php echo htmlentities($result->enterpriseName);?></h1></td>
-                <td width="300"><h2 style="color:white; align-content: center"><?php echo htmlentities($result->introduction);?></h2></td>
-                <td width="300"><h4 style="color:white;">Contact Us: <?php echo htmlentities($result->email);?></h4></td>
-
+        if ($query->rowCount() > 0) {
+            foreach ($results as $result) { ?>
+                <td width="300"><h1><?php echo htmlentities($result->enterpriseName); ?></h1></td>
+                <td width="300"><h2
+                            style="color:white; align-content: center"><?php echo htmlentities($result->introduction); ?></h2>
+                </td>
+                <td width="300"><h4 style="color:white;">Contact Us: <?php echo htmlentities($result->email); ?></h4>
+                </td>
 
 
                 </tr>
 
-            <?php } }?>
+            <?php }
+        } ?>
 
-        <h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"><b><b></h1>
+        <h1 class="wow zoomIn animated animated" data-wow-delay=".5s"
+            style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"><b><b></h1>
 
     </div>
 </div>
@@ -99,6 +103,7 @@ include('includes/config.php');
                     -webkit-transition: width 0.4s ease-in-out;
                     transition: width 0.4s ease-in-out;
                 }
+
                 input[type=submit] {
 
                     display: inline-block;
@@ -122,45 +127,45 @@ include('includes/config.php');
 
 
             <?php
-                               $username=$_SESSION['alogin'];
-                               //echo $username;
-                               $sql ="SELECT etId FROM tblenterprises WHERE username=:uname";
-                               $query= $dbh -> prepare($sql);
-                               $query-> bindParam(':uname', $username, PDO::PARAM_STR);
-                               //$query-> bindParam(':password', $password, PDO::PARAM_STR);
-                               $query-> execute();
-                               $user=$query->fetch(PDO::FETCH_ASSOC);
+            $username = $_SESSION['alogin'];
+            //echo $username;
+            $sql = "SELECT etId FROM tblenterprises WHERE username=:uname";
+            $query = $dbh->prepare($sql);
+            $query->bindParam(':uname', $username, PDO::PARAM_STR);
+            //$query-> bindParam(':password', $password, PDO::PARAM_STR);
+            $query->execute();
+            $user = $query->fetch(PDO::FETCH_ASSOC);
 
-                                $sql = "SELECT * from tbltourpackages WHERE etId=:etId";
-                                $query = $dbh -> prepare($sql);
-                                $query-> bindParam(':etId', $_GET['etid'], PDO::PARAM_INT);
-                                $query->execute();
-                                $results=$query->fetchAll(PDO::FETCH_OBJ);
+            $sql = "SELECT * from tbltourpackages WHERE etId=:etId";
+            $query = $dbh->prepare($sql);
+            $query->bindParam(':etId', $_GET['etid'], PDO::PARAM_INT);
+            $query->execute();
+            $results = $query->fetchAll(PDO::FETCH_OBJ);
 
-            if($query->rowCount() > 0)
-            {
+            if ($query->rowCount() > 0) {
 
-                foreach($results as $result)
-                {	?>
+                foreach ($results as $result) { ?>
                     <div class="rom-btm">
                         <div class="col-md-3 room-left wow fadeInLeft animated" data-wow-delay=".5s">
-                            <img src="admin/pacakgeimages/<?php echo htmlentities($result->PackageImage);?>" class="img-responsive" alt="">
+                            <img src="admin/pacakgeimages/<?php echo htmlentities($result->PackageImage); ?>"
+                                 class="img-responsive" alt="">
                         </div>
                         <div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
-                            <h4><?php echo htmlentities($result->Package);?></h4>
-                            <h6>Type : <?php echo htmlentities($result->PackageType);?></h6>
-                            <p><b>Available at :</b> <?php echo htmlentities($result->PackageLocation);?></p>
-                            <h7><b></b> <?php echo htmlentities($result->PackageFetures);?></h7>
+                            <h4><?php echo htmlentities($result->Package); ?></h4>
+                            <h6>Type : <?php echo htmlentities($result->PackageType); ?></h6>
+                            <p><b>Available at :</b> <?php echo htmlentities($result->PackageLocation); ?></p>
+                            <h7><b></b> <?php echo htmlentities($result->PackageFetures); ?></h7>
                         </div>
                         <div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
-                            <h5>LKR <?php echo htmlentities($result->PackagePrice);?></h5>
-                            <a href="package-details.php?pkgid=<?php echo htmlentities($result->PackageId);?>" class="view">Plan</a>
+                            <h5>LKR <?php echo htmlentities($result->PackagePrice); ?></h5>
+                            <a href="package-details.php?pkgid=<?php echo htmlentities($result->PackageId); ?>"
+                               class="view">Plan</a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
 
-                <?php }} ?>
-
+                <?php }
+            } ?>
 
 
         </div>
@@ -169,15 +174,15 @@ include('includes/config.php');
 <!--- /rooms ---->
 
 <!--- /footer-top ---->
-<?php include('includes/footer.php');?>
+<?php include('includes/footer.php'); ?>
 <!-- signup -->
-<?php include('includes/signup.php');?>
+<?php include('includes/signup.php'); ?>
 <!-- //signu -->
 <!-- signin -->
-<?php include('includes/signin.php');?>
+<?php include('includes/signin.php'); ?>
 <!-- //signin -->
 <!-- write us -->
-<?php include('includes/write-us.php');?>
+<?php include('includes/write-us.php'); ?>
 <!-- //write us -->
 </body>
 </html>

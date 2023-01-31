@@ -32,7 +32,7 @@ include('includes/config.php');
 
 <div class="banner-3">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"><b>Information Center<b></h1>
+		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"><b>Plan Your Trip<b></h1>
 	</div>
 </div>
 
@@ -41,62 +41,10 @@ include('includes/config.php');
 	<div class="container">
 		
 		<div class="room-bottom">
-			
-
 
 <br></br>
-<form class="form-inline" action="infocentre.php" method="post"  >
-<input type="text" name="valueToSearch" placeholder="Search by Location..">
-<button type="submit" name="search" value="Search Record.." id="submit">
-<i class="fa fa-search"></i>
-     </button>
-
-</form>
-<?php 
-if(isset($_POST['search'])){
-    $searchVal = $_POST['valueToSearch'];
-    if($searchVal != ''){
-        $sql = "SELECT * from `blogplaces` WHERE `Place` LIKE '%$searchVal%' OR `Location` LIKE '%$searchVal%' OR `Description` LIKE '%$searchVal%'";
-    } else{
-        $sql = "SELECT * from blogplaces where Id=13";
-    }
-}else{
-	$sql = "SELECT * from blogplaces where Id=13";
-}
-$query = $dbh->prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $result)
-{	?>
-					
-<form name="book" method="post">
-		<div class="selectroom_top">
-		<div class="col-md-4 selectroom_left wow fadeInLeft animated" data-wow-delay=".5s">
-				<img src="admin/pacakgeimages/<?php echo htmlentities($result->Image);?>" class="img-responsive" alt="">
-		</div>
-			
-		<div class="col-md-8 selectroom_right wow fadeInRight animated" data-wow-delay=".5s">
-				<h2><?php echo htmlentities($result->Place);?></h2>
-				<p><b>Location :</b> <?php echo htmlentities($result->Location);?></p>
-						<div class="clearfix"></div>
-			</div>
-				<p style="padding-top: 1%"><?php echo htmlentities($result->Description);?> </p>	
-				<div class="clearfix"></div>
-		</div>
-	
-		</form>
 
 
-
-
-
-
-
-
-<?php }} ?>
 			
 	
 		

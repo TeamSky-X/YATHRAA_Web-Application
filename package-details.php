@@ -138,11 +138,10 @@ foreach($results as $result)
 						<div class="clearfix"></div>
 				<div class="grand">
 					<p><b>Grand Total<b></p>
-					<h3>Rs.<?php echo htmlentities($result->PackagePrice);?></h3>
+					<h3><?php echo htmlentities($result->PackagePrice);?>LKR</h3>
 
 				</div>
 
-                <a href="enterprise.php?etid=<?php echo htmlentities($result->etId);?>" class="view">Provider</a>
 			</div>
 		<h3><b>Package Details<b></h3>
 				<p style="padding-top: 1%"><?php echo htmlentities($result->PackageDetails);?> </p>
