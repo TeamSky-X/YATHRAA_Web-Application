@@ -49,7 +49,7 @@ else{
 								<i class="glyphicon glyphicon-user" aria-hidden="true"></i>
 							</div>
 							<div class="four-text">
-								<h3>User</h3>
+								<h3>Users</h3>
 
 								<?php $sql = "SELECT id from tblusers";
 $query = $dbh -> prepare($sql);
@@ -88,7 +88,7 @@ $cnt1=$query1->rowCount();
 								<i class="glyphicon glyphicon-folder-open" aria-hidden="true"></i>
 							</div>
 							<div class="four-text">
-								<h3>Enquiries</h3>
+								<h3>Issues</h3>
 												<?php $sql2 = "SELECT id from tblenquiry";
 $query2= $dbh -> prepare($sql2);
 $query2->execute();
@@ -107,7 +107,7 @@ $cnt2=$query2->rowCount();
 								<i class="glyphicon glyphicon-briefcase" aria-hidden="true"></i>
 							</div>
 							<div class="four-text">
-								<h3>Toatal packages</h3>
+								<h3>Total Packages</h3>
 																	<?php $sql3 = "SELECT PackageId from tbltourpackages";
 $query3= $dbh -> prepare($sql3);
 $query3->execute();
@@ -123,30 +123,7 @@ $cnt3=$query3->rowCount();
 						<div class="clearfix"></div>
 				</div>
 
-		<div class="four-grids">
-					<div class="col-md-3 four-grid">
-						<div class="four-w3ls">
-							<div class="icon">
-								<i class="glyphicon glyphicon-folder-open" aria-hidden="true"></i>
-							</div>
-							<div class="four-text">
-								<h3>Issues Riaised</h3>
-												<?php $sql5 = "SELECT id from tblissues";
-$query5= $dbh -> prepare($sql5);
-$query5->execute();
-$results5=$query5->fetchAll(PDO::FETCH_OBJ);
-$cnt5=$query5->rowCount();
-					?>
-								<h4><?php echo htmlentities($cnt5);?></h4>
-								
-							</div>
-							
-						</div>
-					</div>
 
-
-					<div class="clearfix"></div>
-				</div>
 <!--//four-grids here-->
 
 
