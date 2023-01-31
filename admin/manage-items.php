@@ -132,7 +132,7 @@ else{
                                         <td><?php echo htmlentities($result->ProductName);?></td>
                                         <td><?php echo htmlentities($result->ProductType);?></td>
                                         <td><?php echo htmlentities($result->SellerDetails);?></td>
-                                        <td>$<?php echo htmlentities($result->ProductPrice);?></td>
+                                        <td><?php echo htmlentities($result->ProductPrice);?></td>
 
                                         <td>
                                             <?php if($result->Status==1) : ?>

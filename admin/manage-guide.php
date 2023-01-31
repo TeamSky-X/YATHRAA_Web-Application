@@ -11,7 +11,7 @@ else{
     <!DOCTYPE HTML>
     <html>
     <head>
-        <title>Manage News</title>
+        <title>YATHRAA | Admin Manage News</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -74,14 +74,14 @@ else{
             </div>
             <!--heder end here-->
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Home</a><i class="fa fa-angle-right"></i>Manage Tourists Guides</li>
+                <li class="breadcrumb-item"><a href="dashboard.php">Home</a><i class="fa fa-angle-right"></i>Manage Tourists Guides</li>
             </ol>
             <div class="agile-grids">
                 <!-- tables -->
 
                 <div class="agile-tables">
                     <div class="w3l-table-info">
-                        <h2>Manage News</h2>
+                        <h2>Manage Tourist Guides</h2>
                         <table id="table">
                             <thead>
                             <tr>

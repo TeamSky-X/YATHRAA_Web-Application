@@ -88,6 +88,8 @@ else{
                                 <th>Enterprise Name</th>
                                 <th>Username</th>
                                 <th>Email</th>
+                                <th></th>
+                                <th></th>
 
                             </tr>
                             </thead>
