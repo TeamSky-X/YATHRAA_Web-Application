@@ -11,7 +11,7 @@ else{
     <!DOCTYPE HTML>
     <html>
     <head>
-        <title>TMS | admin manage packages</title>
+        <title>YATHRAA | Enterprises Manage Items</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -74,7 +74,7 @@ else{
             </div>
             <!--heder end here-->
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Manage Packages</li>
+                <li class="breadcrumb-item"><a href="dashboard.php">Home</a><i class="fa fa-angle-right"></i>Manage Packages</li>
             </ol>
             <div class="agile-grids">
                 <!-- tables -->
@@ -85,7 +85,6 @@ else{
                         <table id="table">
                             <thead>
                             <tr>
-                                <th>#</th>
                                 <th >Name</th>
                                 <th>Type</th>
                                 <th>Location</th>
@@ -119,7 +118,6 @@ else{
                                 foreach($results as $result)
                                 {				?>
                                     <tr>
-                                        <td><?php echo htmlentities($cnt);?></td>
                                         <td><?php echo htmlentities($result->ProductName);?></td>
                                         <td><?php echo htmlentities($result->ProductType);?></td>
                                         <td><?php echo htmlentities($result->SellerDetails);?></td>
@@ -136,9 +134,9 @@ else{
 
 
                                         <td>
-                                            <form method="post" action="delete-package.php">
+                                            <form method="post" action="delete-item.php">
                                                 <!--                                            <input type="hidden" name="id" value="--><?php //echo $_POST['id']; ?><!--">-->
-                                                <input type="hidden" name="delete" value="<?php echo $result->PackageId;?>"><button type="submit">Delete</button>
+                                                <input type="hidden" name="delete" value="<?php echo $result->ProductId;?>"><button type="submit">Delete</button>
                                             </form>
                                         </td>
 
