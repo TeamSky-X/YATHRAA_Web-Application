@@ -56,7 +56,7 @@ else{
     <!DOCTYPE HTML>
     <html>
     <head>
-        <title>SMART Journey : Admin Market Place</title>
+        <title>Enterprise: Create Item</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="Pooled Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
@@ -102,27 +102,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <!--heder end here-->
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Update Transportation Services </li>
+                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Add Item</li>
             </ol>
             <!--grid-->
             <div class="grid-form">
 
                 <!---->
                 <div class="grid-form1">
-                    <h3>Add Transportation Services</h3>
+                    <h3>Add Products to the MarketPlace</h3>
                     <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php }
                     else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
                     <div class="tab-content">
                         <div class="tab-pane active" id="horizontal-form">
                             <form class="form-horizontal" name="package" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Vehicle Name</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Name of the Product</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control1" name="productname" id="productname" placeholder="Add Vehicle Name" required>
+                                        <input type="text" class="form-control1" name="productname" id="productname" placeholder="Enter the name of the product" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Vehicle Type</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Select the type</label>
                                     <div class="col-sm-8">
                                         <label for="focusedinput" class="col-sm-2 control-label">
                                             <input type="checkbox" name="producttype" value="Travelling Equipments"> Equipments
@@ -149,7 +149,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Trip Price</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Cost</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control1" name="productprice" id="productprice" placeholder="Price in Rs." required>
                                     </div>
@@ -164,13 +164,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Vehicle Details</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Details</label>
                                     <div class="col-sm-8">
-                                        <textarea class="form-control" rows="5" cols="50" name="productdetails" id="productdetails" placeholder="Vehicle Details" required></textarea>
+                                        <textarea class="form-control" rows="5" cols="50" name="productdetails" id="productdetails" placeholder="Decription in detail" required></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Vehicle Image</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Image of the product</label>
                                     <div class="col-sm-8">
                                         <input type="file" name="productimage" id="productimage" required>
                                     </div>
@@ -178,7 +178,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 <div class="row">
                                     <div class="col-sm-8 col-sm-offset-2">
-                                        <button type="submit" name="submit" class="btn-primary btn">Add</button>
+                                        <button type="submit" name="submit" class="btn-primary btn">Create</button>
 
                                         <button type="reset" class="btn-inverse btn">Reset</button>
                                     </div>

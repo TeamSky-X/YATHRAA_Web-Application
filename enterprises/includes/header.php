@@ -9,10 +9,9 @@
 								<ul>
 									<li class="dropdown profile_details_drop">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-											<div class="profile_img">	
-												<span class="prfil-img"><img src="images/User-icon.png" alt=""> </span>
+											<div class="profile_img">
 												<div class="user-name">
-													<p>Welcome</p>
+													<p align="center">Welcome</p>
 													<span>Enterprise Account</span>
 
 												</div>
@@ -21,10 +20,7 @@
 												<div class="clearfix"></div>	
 											</div>	
 										</a>
-										<ul class="dropdown-menu drp-mnu">
-											<li> <a href="change-password.php"><i class="fa fa-user"></i>Settings</a> </li> 
-											<li> <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a> </li>
-										</ul>
+
 									</li>
 								</ul>
 							</div>

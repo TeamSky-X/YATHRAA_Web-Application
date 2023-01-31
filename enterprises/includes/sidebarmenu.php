@@ -14,7 +14,7 @@
 										  </ul>
 									</li>
 
-                                        <li id="menu-academico" ><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i><span>View Travel Planner</span> <span style="float: right"></span><div class="clearfix"></div></a></li>
+                                        <li id="menu-academico" ><a href="../../travelpackages.php"><i class="fa fa-list-ul" aria-hidden="true"></i><span>View Travel Planner</span> <span style="float: right"></span><div class="clearfix"></div></a></li>
 
                                         <li id="menu-academico" ><a href="manage-bookings.php"><i class="fa fa-bookmark" aria-hidden="true"></i><span>Manage Bookings</span> <span style="float: right"></span><div class="clearfix"></div></a></li>
 
@@ -25,7 +25,7 @@
                                             </ul>
                                     </li>
 
-                                        <li id="menu-academico" ><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i><span>View MarketPlace</span> <span style="float: right"></span><div class="clearfix"></div></a></li>
+                                        <li id="menu-academico" ><a href="../../pack01.php"><i class="fa fa-list-ul" aria-hidden="true"></i><span>View MarketPlace</span> <span style="float: right"></span><div class="clearfix"></div></a></li>
 
 
 
