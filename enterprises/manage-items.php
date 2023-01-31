@@ -74,14 +74,14 @@ else{
             </div>
             <!--heder end here-->
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="dashboard.php">Home</a><i class="fa fa-angle-right"></i>Manage Packages</li>
+                <li class="breadcrumb-item"><a href="dashboard.php">Home</a><i class="fa fa-angle-right"></i>Manage Items</li>
             </ol>
             <div class="agile-grids">
                 <!-- tables -->
 
                 <div class="agile-tables">
                     <div class="w3l-table-info">
-                        <h2>Manage Packages</h2>
+                        <h2>Manage Items</h2>
                         <table id="table">
                             <thead>
                             <tr>
