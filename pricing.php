@@ -6,7 +6,7 @@ include('includes/config.php');
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Pricing</title>
+<title>YATHRAA | Pricing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -41,10 +41,10 @@ include('includes/config.php');
 </div>
 <!--- /banner ---->
 <!--- rooms ---->
-<center><image src="images/pricing.png" class="pricing"></image></center> 
+<center><image src="images/pricing-removebg-preview.png" class="pricing"></image></center>
 <style>
 .pricing{
-	display: block;
+    display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
