@@ -73,7 +73,10 @@ VALUES(:etname,:username,:password,:category,:email,:introduction)";
 
                 </form>
                 <div class="signin">
-                    <a href="index.php"><button id="sign-in">SIGN-IN</button></a>
+                    <form action="index.php">
+                        <input type="submit" name="submit" value="Sign-in"> <br>
+                    </form>
+
 
                 </div>
 
@@ -91,12 +94,7 @@ VALUES(:etname,:username,:password,:category,:email,:introduction)";
             padding: 0;
         }
 
-        .signin{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid red;
-        }
+
 
         .form{
             width: 600px;
@@ -136,11 +134,7 @@ VALUES(:etname,:username,:password,:category,:email,:introduction)";
             font-size: 40px;
         }
 
-        .submit-form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+
 
         #submit{
             margin-top: 20px;
@@ -153,16 +147,7 @@ VALUES(:etname,:username,:password,:category,:email,:introduction)";
             font-weight: bold;
         }
 
-        #sign-in{
-            margin-top: 20px;
-            width: 140px;
-            height: 30px;
-            border-radius: 10px;
-            border: 3px solid #4A8EFF;
-            background-color: #4A8EFF;
-            color: white;
-            font-weight: bold;
-        }
+
 
         #submit:hover{
             background-color: white;
@@ -216,6 +201,19 @@ VALUES(:etname,:username,:password,:category,:email,:introduction)";
             margin: 5px;
             border: 2px solid #4A8EFF;
             border-radius: 5px;
+
+        }
+
+        .signin input{
+            text-align: center;
+            margin-top: 5px;
+            width: 140px;
+            height: 30px;
+            border-radius: 10px;
+            border: 3px solid #4A8EFF;
+            background-color: #4A8EFF;
+            color: white;
+            font-weight: bold;
 
         }
     </style>
