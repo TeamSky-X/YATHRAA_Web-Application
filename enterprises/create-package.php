@@ -28,7 +28,7 @@ $pfeatures=$_POST['packagefeatures'];
 $pdetails=$_POST['packagedetails'];
 $pcontact=$_POST['packagecontact'];
 $pimage=$_FILES["packageimage"]["name"];
-move_uploaded_file($_FILES["packageimage"]["tmp_name"],"pacakgeimages/".$_FILES["packageimage"]["name"]);
+move_uploaded_file($_FILES["packageimage"]["tmp_name"],"enterprises/pacakgeimages/".$_FILES["packageimage"]["name"]);
 $sql="INSERT INTO tbltourPackages(PackageId,etId,Package,PackageType,PackageLocation,PackagePrice,PackageFetures,PackageDetails,PackageContact,PackageImage) VALUES(:pid,:etId,:pname,:ptype,:plocation,:pprice,:pfeatures,:pdetails,:pcontact,:pimage)";
 $query = $dbh->prepare($sql);
  $query->bindParam(':pid',$pid,PDO::PARAM_STR);
