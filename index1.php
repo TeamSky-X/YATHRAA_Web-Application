@@ -162,7 +162,7 @@ include('includes/config.php');
 <div class="container">
     <div class="holiday">
 
-        <?php $sql = "SELECT * from tblmarketplace order by rand() limit 4";
+        <?php $sql = "SELECT * from tblmarket order by rand() limit 4";
         $query = $dbh->prepare($sql);
         $query->execute();
         $results = $query->fetchAll(PDO::FETCH_OBJ);
