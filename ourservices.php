@@ -57,12 +57,6 @@ include('includes/config.php');
 <br>
 <h3><i class="fa fa-bookmark" aria-hidden="true"></i><b>&nbsp;Provided with a forum where travellers can share and display the opinions of each other regarding travel &nbsp;&nbsp;&nbsp;&nbspdestinations.<b></h4>
 <br>
-<h3><i class="fa fa-bookmark" aria-hidden="true"></i><b>&nbsp;User’s Blog with the ability for the travellers to public their travelogues
-<b></h4>
-<br>
-<h3><i class="fa fa-bookmark" aria-hidden="true"></i><b>&nbsp;A Travel Diary is provided as a collection of memories
-<b></h4>
-<br>
 <h3><i class="fa fa-bookmark" aria-hidden="true"></i><b>&nbsp;Commercial advertisements are displayed<b></h4>
 
 

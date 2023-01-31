@@ -41,7 +41,7 @@ if(isset($_POST['submit']))
                                         <option value="">Select the Issue</option>
                                         <option value="Booking Issues">Issues in Booking</option>
                                         <option value="Cancellation">Issues in MarketPlace</option>
-                                        <option value="Refund">Issues in Pricing</option>
+                                        <option value="Refund">Issues in Tourist Guides</option>
                                         <option value="Other">Other</option>
                                     </select>
                                 </li>

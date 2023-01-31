@@ -6,7 +6,7 @@ session_start();
 try {
     // Get the data from the form
     $description = $_POST["comment"];
-    $email=$_SESSION['login'];
+    $email = $_SESSION['login'];
 
     // Validate the data
     if (empty($description)) {

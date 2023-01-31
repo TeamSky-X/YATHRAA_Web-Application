@@ -6,7 +6,7 @@ include('includes/config.php');
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Forum</title>
+    <title>YATHRAA | Forum</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -148,7 +148,7 @@ include('includes/config.php');
                             <?php if($_SESSION['login'])
                             {?>
                                 <ul class="spe" align="center">
-                                    <button type="submit" name="submit2" class="btn-primary btn">Review</button>
+                                    <button type="submit" name="submit2" class="btn-primary btn">    Review   </button>
                                 </ul>
 
 
@@ -177,14 +177,14 @@ include('includes/config.php');
                     <form action="dislikes.php" method="post">
                         <input type="hidden" name="id" value="<?php echo $result->id;?>">
                         <input type="hidden" name="dislikes" value="<?php echo $result->dislikes;?>">
-                        <button type="submit" class="fa fa-thumbs-down" name="dislike">&nbsp;<?php echo htmlentities($result->dislikes);?></button>
+                        <button type="submit" class="fa fa-thumbs-down" name="dislike">Dislike&nbsp;<?php echo htmlentities($result->dislikes);?></button>
                     </form>
 
                 <?php else : ?>
                     <form action="likes.php" method="post">
                         <input type="hidden" name="id" value="<?php echo $result->id;?>">
                         <input type="hidden" name="likes" value="<?php echo $result->likes;?>">
-                        <button type="submit" class="fa fa-thumbs-up" name="like">&nbsp;</button>
+                        <button type="submit" class="fa fa-thumbs-up" name="like">Like&nbsp;</button>
                     </form>
                 <?php endif; ?>
 

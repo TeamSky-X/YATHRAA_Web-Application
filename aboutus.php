@@ -42,22 +42,21 @@ include('includes/config.php');
 <br>
 <div class="container">
 <p>
-<p><h3><b>About <b><a href="https://cloudtest12345678.herokuapp.com/index.php
-"><b>SMART Journey<b></h3></a> </p>
+<p><h3><b>About <b><a href="https://yathraa.herokuapp.com/index1.php
+"><b>YATHRAA - Embark On The Expedition<b></h3></a> </p>
 <br>
 
-    <h4>SMART Journey is a travelling-related web application dedicated to travelling enthusiasts in Sri Lankan travelling destinations. Foreigners and as well as Sri Lankans who hope to travel in Sri Lanka can acquire all the functionalities of the SMART Journey. 
-SMART Journey is developed and operated by the Team Conjurers, a team of Second Year Undergraduates of the School of IT and Computing at Sri Lanka Technological Campus.
+    <h4>YATHRAA is a travelling-related web application dedicated to travelling enthusiasts in Sri Lankan travelling destinations. Foreigners and as well as Sri Lankans who hope to travel in Sri Lanka can acquire all the functionalities of YATHRAA.
+YATHRAA is developed and operated by the Team Sky-X, a team of Third Year Undergraduates of the School of IT and Computing at Sri Lanka Technological Campus.
 </h4>
 <br>
 <h3><b>Why Join With Us?<b></h3>
 <br>
 <h4><i class="fa fa-plus-circle" aria-hidden="true"></i><b>&nbsp;Well-Recognized Tour Packages with the Booking Facility<b></h4>
 <h4><i class="fa fa-plus-circle" aria-hidden="true"></i><b>&nbsp;Availability of travel-related resources in the MarketPlace with Add to Cart Facility<b></h4>
-<h4><i class="fa fa-plus-circle" aria-hidden="true"></i><b>&nbsp;Information centre with Sri Lankan tourist attractions with a Map<b></h4>		
-<h4><i class="fa fa-plus-circle" aria-hidden="true"></i><b>&nbsp;User’s Blog with travelogues and forum to display ideas and collections of travelers<b></h4>	
-<h4><i class="fa fa-plus-circle" aria-hidden="true"></i><b>&nbsp;Daily updates on Travel-related News<b></h4>	
-<h4><i class="fa fa-plus-circle" aria-hidden="true"></i><b>&nbsp;Travel diary with a collection of memories<b></h4>	
+<h4><i class="fa fa-plus-circle" aria-hidden="true"></i><b>&nbsp;Discover with Sri Lankan tourist attractions with a Map<b></h4>
+<h4><i class="fa fa-plus-circle" aria-hidden="true"></i><b>&nbsp;Information of tourist guides essential in travelling<b></h4>
+<h4><i class="fa fa-plus-circle" aria-hidden="true"></i><b>&nbsp;Daily updates on Travel-related News<b></h4>
 <h4><i class="fa fa-plus-circle" aria-hidden="true"></i><b>&nbsp;Forum to display ideas and opinions of travellers<b></h4>
 </p>
 <br>

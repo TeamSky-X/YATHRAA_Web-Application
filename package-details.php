@@ -42,7 +42,7 @@ $error="Something went wrong. Please try again";
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Travel Planner</title>
+<title>YATHRAA | Travel Planner</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -138,7 +138,7 @@ foreach($results as $result)
 						<div class="clearfix"></div>
 				<div class="grand">
 					<p><b>Grand Total<b></p>
-					<h3><?php echo htmlentities($result->PackagePrice);?></h3>
+					<h3>Rs.<?php echo htmlentities($result->PackagePrice);?></h3>
 
 				</div>
 
