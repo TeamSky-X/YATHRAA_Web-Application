@@ -53,7 +53,7 @@ echo "<script type='text/javascript'> document.location = 'dashboard.php'; </scr
 	<div class="main-wthree">
 	<div class="container">
 	<div class="sin-w3-agile">
-		<h2>Sign In</h2>
+		<h2 style="color: black"><b>Enterprise | Sign In<b></h2>
 		<form  method="post">
 			<div class="username">
 				<span class="username">Username:</span>
@@ -73,7 +73,7 @@ echo "<script type='text/javascript'> document.location = 'dashboard.php'; </scr
 			<div class="clearfix"></div>
 		</form>
 				<div align= "center" class="back">
-                        <a href="signup.php">Not Registered Yet? &nbsp;<button  href="signup.php" class="login">Register Now</button></a>
+                        <a href="signup.php">Not Registered Yet? &nbsp;<button  href="signup.php" class="btn-default">Register Now</button></a>
 				</div>
 				
 	</div>

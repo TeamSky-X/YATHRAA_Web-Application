@@ -4472,7 +4472,7 @@ label.control-label {
 }
 /*---errorpage-----*/
 .main {
-    background: #3b8fc5;
+        background: #E4FFFE;
     min-height: 794px;
 }
 .main p {
@@ -4715,7 +4715,7 @@ ul.bt-list {
 }
 /*---signin-----*/
 .main-wthree{
-		background:#3b8fc5;
+		background:#E4FFFE;
 		min-height:794px;
 }
 span.prfil-img img {
@@ -4800,7 +4800,7 @@ span.prfil-img img {
     text-align: right;
 }
 .main-wthree input[type="submit"]{
-	background-color:#005377;
+	background-color:#E4FFFE;
 	color:#fff;
 	padding:11px;
 	outline: none;
@@ -5288,7 +5288,7 @@ canvas#bar, canvas#line, canvas#pie {
     height: 270px !important;
 }
 .main {
-    background: #3b8fc5;
+    background: #E4FFFE;
     min-height: 675px;
 }
 .questions h5, .questions h2 {
