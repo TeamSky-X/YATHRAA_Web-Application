@@ -116,7 +116,7 @@ $msg="Booking Confirm successfully";
 				</div>
 <!--heder end here-->
 <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Manage Bookings</li>
+                <li class="breadcrumb-item"><a href="dashboard.php">Home</a><i class="fa fa-angle-right"></i>Manage Bookings</li>
             </ol>
 <div class="agile-grids">	
 				<!-- tables -->
@@ -134,7 +134,6 @@ $msg="Booking Confirm successfully";
 							<th>Email address</th>
 							<th>RegDate </th>
 							<th>Comment </th>
-							<th>Status </th>
 						  </tr>
 						</thead>
 						<tbody>
@@ -155,24 +154,8 @@ foreach($results as $result)
 <!--							<td><a href="update-package.php?pid=--><?php //echo htmlentities($result->pid);?><!--">--><?php //echo htmlentities($result->pckname);?><!--</a></td>-->
 							<td><?php echo htmlentities($result->fdate);?> To <?php echo htmlentities($result->tdate);?></td>
 								<td><?php echo htmlentities($result->comment);?></td>
-								<td><?php if($result->status==0)
-{
-echo "Pending";
-}
-if($result->status==1)
-{
-echo "Confirmed";
-}
-if($result->status==2 and  $result->cancelby=='a')
-{
-echo "Cancelled" .$result->upddate;
-} 
-if($result->status==2 and $result->cancelby=='u')
-{
-echo "Cancelled" .$result->upddate;
 
-}
-?></td>
+
 
 <?php //if($result->status==2)
 //{

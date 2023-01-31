@@ -11,7 +11,7 @@ else{
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Manage Users</title>
+<title>YATHRAA | Admin Manage Users</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -74,7 +74,7 @@ else{
 				</div>
 <!--heder end here-->
 <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Manage Users</li>
+                <li class="breadcrumb-item"><a href="dashboard.php">Home</a><i class="fa fa-angle-right"></i>Manage Users</li>
             </ol>
 <div class="agile-grids">	
 				<!-- tables -->
@@ -89,8 +89,6 @@ else{
 							<th>Name</th>
 							<th>Mobile No.</th>
 							<th>Email Id</th>
-							<th>RegDate </th>
-							<th>Updation Date</th>
 
 						  </tr>
 						</thead>
@@ -109,8 +107,6 @@ foreach($results as $result)
 							<td><?php echo htmlentities($result->FullName);?></td>
 							<td><?php echo htmlentities($result->MobileNumber);?></td>
 							<td><?php echo htmlentities($result->EmailId);?></td>
-							<td><?php echo htmlentities($result->RegDate);?></td>
-							<td><?php echo htmlentities($result->UpdationDate);?></td>
                               <td>
                                   <form method="post" action="delete-users.php">
                                       <!--                                            <input type="hidden" name="id" value="--><?php //echo $_POST['id']; ?><!--">-->
