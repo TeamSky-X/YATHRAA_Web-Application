@@ -15,12 +15,10 @@ if(isset($_POST['submit']))
     if($lastInsertId)
     {
         $_SESSION['msg']="Info successfully submited ";
-        echo "<script type='text/javascript'> document.location = 'enqsuccess.php'; </script>";
     }
     else
     {
         $_SESSION['msg']="Something went wrong. Please try again.";
-        echo "<script type='text/javascript'> document.location = 'enqsuccess.php'; </script>";
     }
 }
 ?>
