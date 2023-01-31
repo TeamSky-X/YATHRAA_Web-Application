@@ -91,11 +91,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
 					
 <?php
 
-$value=$_POST['Transportation'];
-$sql = "SELECT * from tblmarket WHERE ProductType = '$value'";
-$query = $dbh->prepare($sql);
-$query->bindParam(':value',$value,PDO::PARAM_STR);
-$query->execute();
+$sql = "SELECT * from tblmarket WHERE ProductType=:type " ;
+$query = $dbh -> prepare($sql);
+//$query -> bindParam(':city', $city, PDO::PARAM_STR);
+$query->execute(['type' => "Travelling Equipments"]);
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 $cnt=1;
 if($query->rowCount() > 0)
@@ -114,7 +113,7 @@ foreach($results as $result)
 				</div>
 				<div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
 					<h5>Rs. <?php echo htmlentities($result->ProductPrice);?></h5>
-					<a href="product-details.php?pkgid=<?php echo htmlentities($result->AddT01_id);?>" class="view">Details</a>
+					<a href="product-details.php?pkgid=<?php echo htmlentities($result->ProductId);?>" class="view">Details</a>
 				</div>
 				<div class="clearfix"></div>
 			</div>

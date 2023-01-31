@@ -80,6 +80,7 @@ include('includes/config.php');
         {	?>
 
             <form name="book" method="post">
+                <a href="#" ><button>Plan Your Trip</button></a>
                 <div class="selectroom_top">
                     <div class="col-md-4 selectroom_left wow fadeInLeft animated" data-wow-delay=".5s">
                         <img src="admin/pacakgeimages/<?php echo htmlentities($result->Image);?>" class="img-responsive" alt="">
@@ -115,12 +116,16 @@ include('includes/config.php');
             </form>
 
 
+            <?php include('includes/Index.html');?>
+
+
+
         <?php }} ?>
 
-                    
 
 
-<?php //include('includes/Index.html');?>
+
+
 </div>
 <!--- /selectroom ---->
 <!--- /footer-top ---->

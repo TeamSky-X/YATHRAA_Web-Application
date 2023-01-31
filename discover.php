@@ -95,13 +95,7 @@ include('includes/config.php');
 
 
 
-
-
-
-
-
                 <?php }} ?>
-
 
 
         </div>

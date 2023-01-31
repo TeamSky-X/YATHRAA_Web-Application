@@ -150,6 +150,13 @@ include('includes/config.php');
                                 <ul class="spe" align="center">
                                     <button type="submit" name="submit2" class="btn-primary btn">Review</button>
                                 </ul>
+
+
+
+                              <p><?php echo htmlentities($result->UserEmail);?></p>
+                              <p><?php echo htmlentities($result->Description);?></p>
+
+
                             <?php } else {?>
                                 <li class="sigi" align="center" style="margin-top: 1%">
                                     <a href="#" data-toggle="modal" data-target="#myModal4" class="btn-primary btn" >Sign-in to Review</a></li>
@@ -177,9 +184,12 @@ include('includes/config.php');
                     <form action="likes.php" method="post">
                         <input type="hidden" name="id" value="<?php echo $result->id;?>">
                         <input type="hidden" name="likes" value="<?php echo $result->likes;?>">
-                        <button type="submit" class="fa fa-thumbs-up" name="like">&nbsp;<?php echo htmlentities($result->likes);?></button>
+                        <button type="submit" class="fa fa-thumbs-up" name="like">&nbsp;</button>
                     </form>
                 <?php endif; ?>
+
+                <p>Likes: <?php echo htmlentities($result->likes);?></p>
+                <p>Dislikes: <?php echo htmlentities($result->dislikes);?></p>
 
 
 
@@ -188,7 +198,7 @@ include('includes/config.php');
 
 
                 <br><br>
-                <ul><a href="#" data-toggle="modal" data-target="#myModal3"><p>@Report</p></a>  </ul>
+
 
             </div>
             <div class="clearfix"></div>

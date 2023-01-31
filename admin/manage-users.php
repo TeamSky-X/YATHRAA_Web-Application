@@ -91,6 +91,7 @@ else{
 							<th>Email Id</th>
 							<th>RegDate </th>
 							<th>Updation Date</th>
+
 						  </tr>
 						</thead>
 						<tbody>
@@ -110,6 +111,12 @@ foreach($results as $result)
 							<td><?php echo htmlentities($result->EmailId);?></td>
 							<td><?php echo htmlentities($result->RegDate);?></td>
 							<td><?php echo htmlentities($result->UpdationDate);?></td>
+                              <td>
+                                  <form method="post" action="delete-users.php">
+                                      <!--                                            <input type="hidden" name="id" value="--><?php //echo $_POST['id']; ?><!--">-->
+                                      <input type="hidden" name="delete" value="<?php echo $result->id;?>"><button type="submit">Delete</button>
+                                  </form>
+                              </td>
 						  </tr>
 						 <?php $cnt=$cnt+1;} }?>
 						</tbody>

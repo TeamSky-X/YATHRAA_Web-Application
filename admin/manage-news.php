@@ -106,7 +106,13 @@ foreach($results as $result)
 							<td><?php echo htmlentities($cnt);?></td>
 							<td><?php echo htmlentities($result->NewsName);?></td>
 							<td><?php echo htmlentities($result->NewsHeading);?></td>
-							<td><a href="update-news.php?newsid=<?php echo htmlentities($result->NewsId);?>"><button type="button" class="btn btn-primary btn-block">View Details</button></a></td>
+                              <td>
+                                  <form method="post" action="delete-news.php">
+                                      <!--                                            <input type="hidden" name="id" value="--><?php //echo $_POST['id']; ?><!--">-->
+                                      <input type="hidden" name="delete" value="<?php echo $result->NewsId;?>"><button type="submit">Delete</button>
+                                  </form>
+                              </td>
+
 						  </tr>
 						 <?php $cnt=$cnt+1;} }?>
 						</tbody>

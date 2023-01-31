@@ -41,12 +41,30 @@ include('includes/config.php');
 	<div class="container">
 		
 		<div class="room-bottom">
-			<h3>Explore the Blog of Users...</h3>
+			<h3>Explore Tourist Guides</h3>
+            <form class="form-inline" action="tourist-guide.php" method="post"  >
+                <input type="text" name="valueToSearch" placeholder="Search by Location..">
+                <button type="submit" name="search" value="Search Record.." id="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+
+            </form>
             <div class="nav-right flex-div">
                 <br></br>
             </div>
 					
-<?php $sql = "SELECT * from usersblog";
+<?php
+
+if(isset($_POST['search'])){
+    $searchVal = $_POST['valueToSearch'];
+    if($searchVal != ''){
+        $sql = "SELECT * from `touristguide` WHERE `city` LIKE '%$searchVal%' OR `guidename` LIKE '%$searchVal%'";
+    } else{
+        $sql = "SELECT * from touristguide";
+    }
+}else{
+    $sql = "SELECT * from touristguide";
+}
 $query = $dbh->prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
@@ -57,11 +75,14 @@ foreach($results as $result)
 {	?>
 			<div class="rom-btm">
 				<div class="col-md-3 room-left wow fadeInLeft animated" data-wow-delay=".5s">
-					<img src="images/<?php echo htmlentities($result->ubImage);?>" class="img-responsive" alt="">
-					<p style=" color:black;"><?php echo htmlentities($result->ubHeading);?></p>
-                    <p style="font-size:10px;"><?php echo htmlentities($result->ubName);?></p>
+					<img src="images/guide.png" class="img-responsive" alt="">
+                    <p style="font-size:15px; color: black;"><?php echo htmlentities($result->guidename);?></p>
+                    <p style="font-size:10px; color: red;"><?php echo htmlentities($result->city);?></p>
+                    <p style="font-size:10px;">Contact: <?php echo htmlentities($result->contact);?></p>
+                    <p style="font-size:10px;"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php echo htmlentities($result->email);?>" target="_blank">Email: <?php echo htmlentities($result->email);?></a></p>
+                    <p style="color:black; font-size:10px;"><?php echo htmlentities($result->bio);?></p>
                     
-					<a href="userblog-details.php?ubid=<?php echo htmlentities($result->ubId);?>" class="view">See more</a>
+<!--					<a href="userblog-details.php?ubid=--><?php //echo htmlentities($result->ubId);?><!--" class="view">See more</a>-->
                     <br></br>
 				</div>
 			

@@ -25,7 +25,7 @@ try {
     $stmt->execute();
 
     // Confirm that the review was submitted
-    echo "Thank you for submitting your review!";
+    header("Location: forum.php");
 
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();

@@ -90,13 +90,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 					
 <?php
-    $value=$_POST['Clothing'];
-    $sql = "SELECT * from tblmarket";
-    $query = $dbh->prepare($sql);
-    $query->bindParam(':value',$value,PDO::PARAM_STMT);
-    $query->execute();
-    $results=$query->fetchAll(PDO::FETCH_OBJ);
-    $cnt=1;
+$sql = "SELECT * from tblmarket WHERE ProductType=:type " ;
+$query = $dbh -> prepare($sql);
+//$query -> bindParam(':city', $city, PDO::PARAM_STR);
+$query->execute(['type' => "Transportation"]);
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
     if($query->rowCount() > 0)
     {
     foreach($results as $result)
@@ -113,7 +112,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                     </div>
                     <div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
                         <h5>Rs. <?php echo htmlentities($result->ProductPrice);?></h5>
-                        <a href="product-details02.php?pkgid=<?php echo htmlentities($result->AddT03_id);?>" class="view">Details</a>
+                        <a href="product-details.php?pkgid=<?php echo htmlentities($result->ProductId);?>" class="view">Details</a>
                     </div>
                     <div class="clearfix"></div>
                 </div>

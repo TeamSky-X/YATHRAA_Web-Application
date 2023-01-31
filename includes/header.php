@@ -93,11 +93,11 @@
 								
 {?>								<li><a href="infocentre.php"><b>Info Centre<b></a></li>
 								<li><a href="travelpackages.php"><b>Travel Planner<b></a></li>
-								<li><a href="user-blog.php"><b>User's Blog<b></a></li>
+								<li><a href="tourist-guide.php"><b>User's Blog<b></a></li>
 								<li><a href="tour-history.php"><b>Travel Diary<b></a></li>
 								<?php } else { ?>
 									<li><a href="discover.php"><b>Info Centre<b></a></li>
-									<li><a href="user-blogview.php"><b>User's Blog<b></a></li>
+									<li><a href="tourist-guide.php"><b>User's Blog<b></a></li>
 								<li><a href="pricing.php"><b>Pricing<b> </a></li>
 								
 

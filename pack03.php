@@ -89,9 +89,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
 			<h3>Accommodation</h3>
 
 					
-<?php $sql = "SELECT * from tblmarketplace04";
-$query = $dbh->prepare($sql);
-$query->execute();
+<?php
+
+$sql = "SELECT * from tblmarket WHERE ProductType=:type " ;
+$query = $dbh -> prepare($sql);
+//$query -> bindParam(':city', $city, PDO::PARAM_STR);
+$query->execute(['type' => "Accommodation"]);
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 $cnt=1;
 if($query->rowCount() > 0)
@@ -110,7 +113,7 @@ foreach($results as $result)
 				</div>
 				<div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
 					<h5>Rs. <?php echo htmlentities($result->ProductPrice);?></h5>
-					<a href="product-details03.php?pkgid=<?php echo htmlentities($result->AddT04_id);?>" class="view">Details</a>
+					<a href="product-details.php?pkgid=<?php echo htmlentities($result->ProductId);?>" class="view">Details</a>
 				</div>
 				<div class="clearfix"></div>
 			</div>

@@ -95,7 +95,7 @@ $error="Something went wrong. Please try again";
 				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
 <?php 
 $pid=intval($_GET['pkgid']);
-$sql = "SELECT * from tblmarketplace where AddT01_id=:pid";
+$sql = "SELECT * from tblmarket where ProductId=:pid";
 $query = $dbh->prepare($sql);
 $query -> bindParam(':pid', $pid, PDO::PARAM_STR);
 $query->execute();
@@ -113,7 +113,7 @@ foreach($results as $result)
 			</div>
 			<div class="col-md-8 selectroom_right wow fadeInRight animated" data-wow-delay=".5s">
 				<h2><?php echo htmlentities($result->ProductName);?></h2>
-				<p class="dow">#PC-<?php echo htmlentities($result->AddT01_id);?></p>
+				<p class="dow">#PC-<?php echo htmlentities($result->ProductId);?></p>
 				<p><b>Product Type :</b> <?php echo htmlentities($result->ProductType);?></p>
 				<p><b>Seller Details :</b> <?php echo htmlentities($result->SellerDetails);?></p>
 					<p><b>Contact No:</b> <?php echo htmlentities($result->ProductFeatures);?></p>
@@ -164,7 +164,7 @@ foreach($results as $result)
 	</div>
 </div>
 <!--- /selectroom ---->
-<<!--- /footer-top ---->
+<!--- /footer-top ---->
 <?php include('includes/footer.php');?>
 <!-- signup -->
 <?php include('includes/signup.php');?>			
