@@ -6,7 +6,7 @@ include('includes/config.php');
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>SMART Journey</title>
+<title>YATHRAA</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -149,7 +149,7 @@ foreach($results as $result)
 <div class="container">
 	<div class="holiday">
 
-	<?php $sql = "SELECT * from tblmarketplace order by rand() limit 4";
+	<?php $sql = "SELECT * from tblmarket order by rand() limit 4";
 $query = $dbh->prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
