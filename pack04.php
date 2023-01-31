@@ -101,7 +101,7 @@ foreach($results as $result)
 {	?>
 			<div class="rom-btm">
 				<div class="col-md-3 room-left wow fadeInLeft animated" data-wow-delay=".5s">
-					<img src="admin/pacakgeimages/<?php echo htmlentities($result->ProductImage);?>" class="img-responsive" alt="">
+					<img src="enterprises/pacakgeimages/<?php echo htmlentities($result->ProductImage);?>" class="img-responsive" alt="">
 				</div>
 				<div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
 					<h4>Product Name: <?php echo htmlentities($result->ProductName);?></h4>
