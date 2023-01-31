@@ -67,7 +67,7 @@ echo "<script type='text/javascript'> document.location = 'dashboard.php'; </scr
 			</div>
 			
 			<div class="login-w3">
-					<input type="submit" class="login" name="login" value="Sign In">
+					<input type="submit" class="sign" name="login" value="Sign In">
 			</div>
 
 			<div class="clearfix"></div>
@@ -75,9 +75,12 @@ echo "<script type='text/javascript'> document.location = 'dashboard.php'; </scr
 				<div align= "center" class="back">
                         <a href="signup.php">Not Registered Yet? &nbsp;<button  href="signup.php" class="btn-default">Register Now</button></a>
 				</div>
+
+
 				
 	</div>
 	</div>
 	</div>
 </body>
+
 </html>
