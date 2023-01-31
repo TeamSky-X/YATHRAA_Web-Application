@@ -171,10 +171,10 @@ include('includes/config.php');
             foreach ($results as $result) { ?>
                 <div class="rom-btm">
                     <div class="col-md-3 room-left wow fadeInLeft animated" data-wow-delay=".5s">
-                        <img src="admin/pacakgeimages/<?php echo htmlentities($result->ProductImage); ?>"
+                        <img src="enterprises/pacakgeimages/<?php echo htmlentities($result->ProductImage); ?>"
                              class="img-responsive" alt="">
                         <h4><?php echo htmlentities($result->ProductName); ?></h4>
-                        <a href="product-details.php?pkgid=<?php echo htmlentities($result->AddT01_id); ?>"
+                        <a href="product-details.php?pkgid=<?php echo htmlentities($result->ProductId); ?>"
                            class="view">View</a>
                         <br>
                     </div>
