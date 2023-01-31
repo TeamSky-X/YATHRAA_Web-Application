@@ -11,7 +11,7 @@ else{
     <!DOCTYPE HTML>
     <html>
     <head>
-        <title>TMS | admin manage packages</title>
+        <title>YATHRAA| Admin manage packages</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -74,14 +74,14 @@ else{
             </div>
             <!--heder end here-->
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Manage Packages</li>
+                <li class="breadcrumb-item"><a href="dashboard.php">Home</a><i class="fa fa-angle-right"></i>Manage Items</li>
             </ol>
             <div class="agile-grids">
                 <!-- tables -->
 
                 <div class="agile-tables">
                     <div class="w3l-table-info">
-                        <h2>Manage Packages</h2>
+                        <h2>Manage Items</h2>
 
                         <form class="form-inline" action="manage-items.php" method="post">
                             <input type="text" name="valueToSearch" placeholder="Search by Location..">
@@ -96,13 +96,12 @@ else{
                         <table id="table">
                             <thead>
                             <tr>
-                                <th>#</th>
-                                <th >Name</th>
+                                <th>Product Name</th>
                                 <th>Type</th>
-                                <th>Location</th>
+                                <th>Provider Details</th>
                                 <th>Price</th>
-                                <th>Creation Date</th>
-                                <th>Action</th>
+                                <th></th>
+                                <th></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -111,7 +110,7 @@ else{
                             if(isset($_POST['search'])){
                                 $searchVal = $_POST['valueToSearch'];
                                 if($searchVal != ''){
-                                    $sql = "SELECT * from `tblmarket` WHERE `ProductName` LIKE '%$searchVal%'";
+                                    $sql = "SELECT * from `tblmarket` WHERE `ProductName` LIKE '%$searchVal%' OR `ProductType` LIKE '%$searchVal%'";
                                 } else{
                                     $sql = "SELECT * from tblmarket";
                                 }
@@ -130,13 +129,11 @@ else{
                                 foreach($results as $result)
                                 {				?>
                                     <tr>
-                                        <td><?php echo htmlentities($cnt);?></td>
                                         <td><?php echo htmlentities($result->ProductName);?></td>
                                         <td><?php echo htmlentities($result->ProductType);?></td>
                                         <td><?php echo htmlentities($result->SellerDetails);?></td>
                                         <td>$<?php echo htmlentities($result->ProductPrice);?></td>
-                                        <td>$<?php echo htmlentities($result->ProductFeatures);?></td>
-                                        <td><?php echo htmlentities($result->Creationdate);?></td>
+
                                         <td>
                                             <?php if($result->Status==1) : ?>
                                                 <p>Approved</p>

@@ -1,4 +1,4 @@
 <div class="copyrights">
-	 <p>© 2022 Team Conjurers. All Rights Reserved |  <a href="https://cloudtest12345678.herokuapp.com/index.php
-">SMART Journey</a> </p>
+	 <p>© 2023 Team SKY-X. All Rights Reserved |  <a href="https://yathraa.herokuapp.com/index1.php
+">YATHRAA</a> </p>
 </div>	

@@ -43,7 +43,7 @@ else{
     <!DOCTYPE HTML>
     <html>
     <head>
-        <title>SMART Journey : Admin Market Place</title>
+        <title>YATHRAA : Admin Create Items</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="Pooled Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
@@ -89,14 +89,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <!--heder end here-->
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Update Transportation Services </li>
+                <li class="breadcrumb-item"><a href="dashboard.php">Home</a><i class="fa fa-angle-right"></i>Create MarketPlace Items</li>
             </ol>
             <!--grid-->
             <div class="grid-form">
 
                 <!---->
                 <div class="grid-form1">
-                    <h3>Add Transportation Services</h3>
+                    <h3>Create MarketPlace Items</h3>
 
                     <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php }
                     else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
@@ -104,25 +104,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="tab-pane active" id="horizontal-form">
                             <form class="form-horizontal" name="package" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Vehicle Name</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Product Name</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control1" name="productname" id="productname" placeholder="Add Vehicle Name" required>
+                                        <input type="text" class="form-control1" name="productname" id="productname" placeholder="Product Name" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Vehicle Type</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Select the Type</label>
                                     <div class="col-sm-8">
                                         <label for="focusedinput" class="col-sm-2 control-label">
-                                            <input type="checkbox" name="producttype" value="Travelling Equipments"> Equipments
+                                            <input type="radio" name="producttype" value="Travelling Equipments"> Equipments
                                         </label>
                                         <label for="focusedinput" class="col-sm-2 control-label">
-                                            <input type="checkbox" name="producttype" value="Clothing"> Clothing
+                                            <input type="radio" name="producttype" value="Clothing"> Clothing
                                         </label>
                                         <label for="focusedinput" class="col-sm-2 control-label">
-                                            <input type="checkbox" name="producttype" value="Accommodation"> Accommodation
+                                            <input type="radio" name="producttype" value="Accommodation"> Accommodation
                                         </label>
                                         <label for="focusedinput" class="col-sm-2 control-label">
-                                            <input type="checkbox" name="producttype" value="Transportation"> Transportation
+                                            <input type="radio" name="producttype" value="Transportation"> Transportation
                                         </label>
 
 <!--                                        <input type="checkbox" class="form-control1" name="producttype" id="producttype" placeholder="Vechile Type" required>-->
@@ -152,13 +152,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Vehicle Details</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Details</label>
                                     <div class="col-sm-8">
-                                        <textarea class="form-control" rows="5" cols="50" name="productdetails" id="productdetails" placeholder="Vehicle Details" required></textarea>
+                                        <textarea class="form-control" rows="5" cols="50" name="productdetails" id="productdetails" placeholder="Details" required></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Vehicle Image</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Image</label>
                                     <div class="col-sm-8">
                                         <input type="file" name="productimage" id="productimage" required>
                                     </div>
@@ -166,7 +166,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 <div class="row">
                                     <div class="col-sm-8 col-sm-offset-2">
-                                        <button type="submit" name="submit" class="btn-primary btn">Add</button>
+                                        <button type="submit" name="submit" class="btn-primary btn">Create</button>
 
                                         <button type="reset" class="btn-inverse btn">Reset</button>
                                     </div>

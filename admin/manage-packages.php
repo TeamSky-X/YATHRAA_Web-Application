@@ -11,7 +11,7 @@ else{
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>TMS | admin manage packages</title>
+<title>YATHRAA | Admin manage packages</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -74,7 +74,7 @@ else{
 				</div>
 <!--heder end here-->
 <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Manage Packages</li>
+                <li class="breadcrumb-item"><a href="dashboard.php">Home</a><i class="fa fa-angle-right"></i>Manage Packages</li>
             </ol>
 <div class="agile-grids">	
 				<!-- tables -->
@@ -94,13 +94,13 @@ else{
 					    <table id="table">
 						<thead>
 						  <tr>
-						  <th>#</th>
-							<th >Name</th>
+							<th>Package Name</th>
 							<th>Type</th>
 							<th>Location</th>
 							<th>Price</th>
-							<th>Creation Date</th>
-							<th>Action</th>
+							<th>Contact Number</th>
+                              <th></th>
+                              <th></th>
 						  </tr>
 						</thead>
 						<tbody>
@@ -109,7 +109,7 @@ else{
 if(isset($_POST['search'])){
     $searchVal = $_POST['valueToSearch'];
     if($searchVal != ''){
-        $sql = "SELECT * from `tbltourpackages` WHERE `PackageName` LIKE '%$searchVal%'";
+        $sql = "SELECT * from `tbltourpackages` WHERE `Package` LIKE '%$searchVal%' OR `PackageLocation` LIKE '%$searchVal%'";
     } else{
         $sql = "SELECT * from tbltourpackages";
     }
@@ -127,13 +127,11 @@ if($query->rowCount() > 0)
 foreach($results as $result)
 {				?>		
 						  <tr>
-							<td><?php echo htmlentities($cnt);?></td>
-							<td><?php echo htmlentities($result->PackageName);?></td>
+							<td><?php echo htmlentities($result->Package);?></td>
 							<td><?php echo htmlentities($result->PackageType);?></td>
 							<td><?php echo htmlentities($result->PackageLocation);?></td>
-							<td>$<?php echo htmlentities($result->PackagePrice);?></td>
-							<td>$<?php echo htmlentities($result->PackageContact);?></td>
-							<td><?php echo htmlentities($result->Creationdate);?></td>
+							<td>Rs.<?php echo htmlentities($result->PackagePrice);?></td>
+							<td><?php echo htmlentities($result->PackageContact);?></td>
                               <td>
                                   <?php if($result->Status==1) : ?>
                                       <p>Approved</p>

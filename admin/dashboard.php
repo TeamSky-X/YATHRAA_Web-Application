@@ -10,7 +10,7 @@ else{
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Dashboard</title>
+<title>YATHRAA | Admin Dashboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -39,7 +39,7 @@ else{
 <?php include('includes/header.php');?>
 <!--header end here-->
 		<ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Home</a> <i class="fa fa-angle-right"></i></li>
+                <li class="breadcrumb-item"><a href="dashboard.php">Home</a> <i class="fa fa-angle-right"></i></li>
             </ol>
 <!--four-grids here-->
 		<div class="four-grids">
