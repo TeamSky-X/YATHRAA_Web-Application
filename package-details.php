@@ -117,7 +117,7 @@ foreach($results as $result)
 <form name="book" method="post">
 		<div class="selectroom_top">
 			<div class="col-md-4 selectroom_left wow fadeInLeft animated" data-wow-delay=".5s">
-				<img src="admin/pacakgeimages/<?php echo htmlentities($result->PackageImage);?>" class="img-responsive" alt="">
+				<img src="enterprises/pacakgeimages/<?php echo htmlentities($result->PackageImage);?>" class="img-responsive" alt="">
 			</div>
 			<div class="col-md-8 selectroom_right wow fadeInRight animated" data-wow-delay=".5s">
 				<h2><?php echo htmlentities($result->PackageName);?></h2>
